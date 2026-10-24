@@ -68,9 +68,14 @@ Paste the commands you ran to install the web server and create `index.html`:
 ## Questions
 
 1. Your security group has an SSH rule and an HTTP rule. What does each one let you do? What would stop working if you deleted the HTTP rule?
+ The SSH rule allows me to connect remotely to my EC2 instance using SSH on TCP port 22. The HTTP rule allows users to access my web server through a browser using HTTP on TCP port 80. If I deleted the HTTP rule, users would not be able to access my website from the internet, even if the Apache web server were running.
 2. In Part 1.1 you never logged in to install the web server. What installed it, and when did it run?
+The EC2 user data script installed the web server automatically. It ran during the initial startup of the EC2 instance. The script installed Apache, started the web server, and configured it to start automatically.
+
 3. Why does the web page open with `http://` but not with `https://`?
+The web server was configured to use HTTP on port 80. HTTPS requires TLS/SSL configuration and a certificate, which were not configured for this lab. Therefore, the webpage is accessible using http:// but not https://.
 4. Part 1.2 asked for a 10 GiB root volume. Where in the launch settings did you set it, and how can you check the size on the running instance?
+I configured the root volume size as 10 GiB in the Configure storage section when launching the EC2 instance. To check the size of the running instance's root volume, I can select the instance in the AWS EC2 Console, open the Storage tab, and check the attached root EBS volume. It should show a size of 10 GiB.
 
 ## Problems and how I solved them (optional)
 
