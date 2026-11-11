@@ -65,7 +65,9 @@ One suggestion an AI tool gave you and how you checked it.
 
 ## Clean up
 
-- [ ] Instances terminated.
-- [ ] NAT gateway deleted and its Elastic IP released.
-- [ ] Internet gateway detached and deleted.
-- [ ] `lab4-vpc` deleted.
+I deleted the lab resources after finishing the tests to avoid unnecessary AWS charges.
+
+- [x] Instances terminated.
+- [x] NAT gateway deleted and its Elastic IP released.
+- [x] Internet gateway detached and deleted.
+- [x] lab4-vpc deleted.
